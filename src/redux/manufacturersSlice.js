@@ -5,20 +5,16 @@ const fetchManufacturers = createAsyncThunk(
   'manufacturers/fetchManufacturers',
   async () => {
     const response = await axios.get('https://vpic.nhtsa.dot.gov/api/vehicles/GetAllManufacturers?format=json');
-    const results = response.data.Results;
-    return results;
+    const results = response.data;
+    return results.Results;
   },
 );
 
 const manufacturersSlice = createSlice({
-  name: 'manufaturers',
+  name: 'manufacturers',
   initialState: {
     manufacturers: [],
     status: 'idle',
-  },
-  reducers: {
-    filterManufacturers: () => {
-    },
   },
   extraReducers: (builder) => {
     builder

@@ -1,12 +1,14 @@
 import { Route, Routes } from 'react-router';
-import DetailsPage from './components/DetailsPage';
-import Homepage from './components/Homepage';
+import Makes from './components/Makes';
+import Manufacturers from './components/Manufacturers';
+import Homepage from './components/pages/Home';
 
 const App = () => (
   <div className="App">
     <Routes>
       <Route path="/" element={<Homepage />} />
-      <Route path="/details/:id" element={<DetailsPage />} />
+      <Route path="/makes" element={<Makes />} />
+      <Route path="/manufacturers" element={<Manufacturers />} />
     </Routes>
   </div>
 );
