@@ -2,3 +2,17 @@
   margin: 0;
   padding: 0;
 }
+
+.manufacturers-page {
+  padding: 2rem;
+}
+
+.manufacturers-page ul li {
+  padding: 1rem 0;
+  background-color: lightgrey;
+}
+
+.manufacturers-page ul li:nth-child(odd) {
+  padding: 1rem 0;
+  background-color: #fff;
+}
