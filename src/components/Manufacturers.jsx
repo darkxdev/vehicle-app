@@ -24,6 +24,6 @@ const Manufacturers = () => {
       </ul>
     </div>
   );
-}
+};
 
-export default Manufacturers
+export default Manufacturers;

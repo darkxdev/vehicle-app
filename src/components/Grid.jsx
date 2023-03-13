@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 const Grid = () => {
   const categories = [
@@ -12,7 +12,7 @@ const Grid = () => {
       path: '/manufacturers',
       id: '2',
     },
-  ]
+  ];
 
   return (
     <div>
@@ -25,7 +25,7 @@ const Grid = () => {
         ))}
       </ul>
     </div>
-  )
+  );
 };
 
 export default Grid;

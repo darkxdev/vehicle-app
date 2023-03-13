@@ -1,12 +1,9 @@
-import Grid from "../Grid";
+import Grid from '../Grid';
 
-const Homepage = () => {
-
-  return (
-    <div className="homepage">
-      <Grid />
-    </div>
-  )
-};
+const Homepage = () => (
+  <div className="homepage">
+    <Grid />
+  </div>
+);
 
 export default Homepage;

@@ -24,6 +24,6 @@ const Makes = () => {
       </ul>
     </div>
   );
-}
+};
 
-export default Makes
+export default Makes;
