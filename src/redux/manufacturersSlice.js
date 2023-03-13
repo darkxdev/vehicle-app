@@ -17,7 +17,7 @@ const manufacturersSlice = createSlice({
     status: 'idle',
   },
   reducers: {
-    filterManufacturers: (state, action) => {
+    filterManufacturers: () => {
     },
   },
   extraReducers: (builder) => {
