@@ -5,8 +5,8 @@ const fetchMakes = createAsyncThunk(
   'makes/fetchMakes',
   async () => {
     const response = await axios.get('https://vpic.nhtsa.dot.gov/api/vehicles/GetAllMakes?format=json');
-    const results = response.data;
-    return results.Results;
+    const { Count: count, Results: results } = response.data;
+    return { count, results };
   },
 );
 
@@ -24,7 +24,8 @@ const makesSlice = createSlice({
       }))
       .addCase(fetchMakes.fulfilled, (state, action) => ({
         ...state,
-        makes: action.payload,
+        count: action.payload.count,
+        makes: action.payload.results,
         status: 'succeeded',
       }))
       .addCase(fetchMakes.rejected, (state) => ({

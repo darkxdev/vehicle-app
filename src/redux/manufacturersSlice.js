@@ -5,8 +5,8 @@ const fetchManufacturers = createAsyncThunk(
   'manufacturers/fetchManufacturers',
   async () => {
     const response = await axios.get('https://vpic.nhtsa.dot.gov/api/vehicles/GetAllManufacturers?format=json');
-    const results = response.data;
-    return results.Results;
+    const { Count: count, Results: results } = response.data;
+    return { count, results };
   },
 );
 
@@ -24,7 +24,8 @@ const manufacturersSlice = createSlice({
       }))
       .addCase(fetchManufacturers.fulfilled, (state, action) => ({
         ...state,
-        manufacturers: action.payload,
+        count: action.payload.count,
+        manufacturers: action.payload.results,
         status: 'succeeded',
       }))
       .addCase(fetchManufacturers.rejected, (state) => ({
