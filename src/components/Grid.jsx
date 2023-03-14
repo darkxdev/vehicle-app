@@ -3,17 +3,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { fetchCars } from '../redux/carsSlice';
 import { fetchMakes } from '../redux/makesSlice';
-import { fetchManufacturers } from '../redux/manufacturersSlice'
+import { fetchManufacturers } from '../redux/manufacturersSlice';
 import { fetchMotos } from '../redux/motosSlice';
 import { fetchParts } from '../redux/partsSlice';
 import { fetchTrucks } from '../redux/trucksSlice';
 
 const Grid = () => {
-  //Importing methods from libraries
+  // Importing methods from libraries
   const dispatch = useDispatch();
   const [query, setQuery] = useState('');
 
-  //Categories' states selectors
+  // Categories' states selectors
   const makes = useSelector((state) => state.makes.makes);
   const manufacturers = useSelector((state) => state.manufacturers.manufacturers);
   const parts = useSelector((state) => state.parts.parts);
@@ -28,7 +28,7 @@ const Grid = () => {
   const motosCount = useSelector((state) => state.motos.count);
   const trucksCount = useSelector((state) => state.trucks.count);
 
-  //Fetching data when mounting the components
+  // Fetching data when mounting the components
   useEffect(() => {
     if (makes.length === 0) {
       dispatch(fetchMakes());
@@ -65,7 +65,7 @@ const Grid = () => {
     }
   });
 
-  //Object storing the categories and their properties
+  // Object storing the categories and their properties
   const categories = [
     {
       category: 'Makes',
@@ -105,16 +105,16 @@ const Grid = () => {
     },
   ];
 
-  //Search bar filter methods
-  const filteredCategories = categories.filter((category) =>
-    category.category.toLowerCase().includes(query.toLowerCase())
+  // Search bar filter methods
+  const filteredCategories = categories.filter(
+    (category) => category.category.toLowerCase().includes(query.toLowerCase()),
   );
 
   const handleQueryChange = (event) => {
     setQuery(event.target.value);
   };
 
-  //Rendering the component
+  // Rendering the component
   return (
     <div>
       <h3>STATS BY CATEGORY</h3>

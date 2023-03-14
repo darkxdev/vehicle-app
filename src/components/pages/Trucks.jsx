@@ -9,7 +9,7 @@ const Trucks = () => {
       <ul>
         {trucks.map((truck) => (
           <li key={truck.MakeId}>
-            {car.MakeName}
+            {truck.MakeName}
           </li>
         ))}
       </ul>
