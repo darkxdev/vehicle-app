@@ -105,8 +105,8 @@ const Grid = () => {
           <li key={category.id}>
             <NavLink to={category.path}>
               {category.category}
-              {category.count && <p>{category.count} items</p>}
             </NavLink>
+            {category.count && <p>{category.count} items</p>}
           </li>
         ))}
       </ul>
