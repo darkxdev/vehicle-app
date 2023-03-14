@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { fetchCars } from '../redux/carsSlice';
@@ -29,41 +29,20 @@ const Grid = () => {
   const trucksCount = useSelector((state) => state.trucks.count);
 
   // Fetching data when mounting the components
-  useEffect(() => {
-    if (makes.length === 0) {
-      dispatch(fetchMakes());
-    }
-  });
+  const useFetchData = (data, fetchData) => {
+    useEffect(() => {
+      if (data.length === 0) {
+        dispatch(fetchData());
+      }
+    }, [data, fetchData]);
+  };
 
-  useEffect(() => {
-    if (manufacturers.length === 0) {
-      dispatch(fetchManufacturers());
-    }
-  });
-
-  useEffect(() => {
-    if (parts.length === 0) {
-      dispatch(fetchParts());
-    }
-  });
-
-  useEffect(() => {
-    if (cars.length === 0) {
-      dispatch(fetchCars());
-    }
-  });
-
-  useEffect(() => {
-    if (motos.length === 0) {
-      dispatch(fetchMotos());
-    }
-  });
-
-  useEffect(() => {
-    if (trucks.length === 0) {
-      dispatch(fetchTrucks());
-    }
-  });
+  useFetchData(makes, fetchMakes);
+  useFetchData(manufacturers, fetchManufacturers);
+  useFetchData(parts, fetchParts);
+  useFetchData(cars, fetchCars);
+  useFetchData(motos, fetchMotos);
+  useFetchData(trucks, fetchTrucks);
 
   // Object storing the categories and their properties
   const categories = [
@@ -106,9 +85,11 @@ const Grid = () => {
   ];
 
   // Search bar filter methods
-  const filteredCategories = categories.filter(
-    (category) => category.category.toLowerCase().includes(query.toLowerCase()),
-  );
+  const filteredCategories = useMemo(() => {
+    return categories.filter((category) =>
+      category.category.toLowerCase().includes(query.toLowerCase())
+    );
+  }, [categories, query]);
 
   const handleQueryChange = (event) => {
     setQuery(event.target.value);
@@ -124,7 +105,7 @@ const Grid = () => {
           <li key={category.id}>
             <NavLink to={category.path}>
               {category.category}
-              {category.count && <p>{category.count}</p>}
+              {category.count && <p>{category.count} items</p>}
             </NavLink>
           </li>
         ))}
