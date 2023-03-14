@@ -3,9 +3,8 @@
   padding: 0;
 }
 
-.homepage {
+.page {
   padding: 2rem;
-  max-width: 400px;
   background-color: lightgray;
   margin: auto;
 }

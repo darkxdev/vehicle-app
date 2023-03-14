@@ -4,7 +4,7 @@ const Manufacturers = () => {
   const manufacturers = useSelector((state) => state.manufacturers.manufacturers);
 
   return (
-    <div className="manufacturers-page">
+    <div className="manufacturers-page page">
       <h1>Manufacturers</h1>
       <ul>
         {manufacturers.map((manufacturer) => (

@@ -3,6 +3,9 @@ import Makes from './components/pages/Makes';
 import Manufacturers from './components/pages/Manufacturers';
 import Homepage from './components/pages/Home';
 import Parts from './components/pages/Parts';
+import Cars from './components/pages/Cars';
+import Motos from './components/pages/Motos';
+import Trucks from './components/pages/Trucks';
 
 const App = () => (
   <div className="App">
@@ -11,8 +14,9 @@ const App = () => (
       <Route path="/makes" element={<Makes />} />
       <Route path="/manufacturers" element={<Manufacturers />} />
       <Route path="/parts" element={<Parts />} />
-      <Route path="/a" element={<Manufacturers />} />
-      <Route path="/b" element={<Manufacturers />} />
+      <Route path="/cars" element={<Cars />} />
+      <Route path="/motos" element={<Motos />} />
+      <Route path="/trucks" element={<Trucks />} />
     </Routes>
   </div>
 );

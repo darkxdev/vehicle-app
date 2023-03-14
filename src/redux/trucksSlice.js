@@ -25,7 +25,7 @@ const trucksSlice = createSlice({
       .addCase(fetchTrucks.fulfilled, (state, action) => ({
         ...state,
         count: action.payload.count,
-        makes: action.payload.results,
+        trucks: action.payload.results,
         status: 'succeeded',
       }))
       .addCase(fetchTrucks.rejected, (state) => ({

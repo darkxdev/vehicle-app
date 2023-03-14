@@ -25,7 +25,7 @@ const motosSlice = createSlice({
       .addCase(fetchMotos.fulfilled, (state, action) => ({
         ...state,
         count: action.payload.count,
-        makes: action.payload.results,
+        motos: action.payload.results,
         status: 'succeeded',
       }))
       .addCase(fetchMotos.rejected, (state) => ({

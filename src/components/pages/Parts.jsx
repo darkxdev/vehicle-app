@@ -4,12 +4,12 @@ const Parts = () => {
   const parts = useSelector((state) => state.parts.parts);
 
   return (
-    <div className="parts-page">
+    <div className="parts-page page">
       <h1>Parts</h1>
       <ul>
-        {parts.map((parts) => (
-          <li key={parts.ManufacturerId}>
-            {parts.Name}
+        {parts.map((part) => (
+          <li key={part.ManufacturerId}>
+            {part.Name}
           </li>
         ))}
       </ul>

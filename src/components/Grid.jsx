@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { fetchCars } from '../redux/carsSlice';
 import { fetchMakes } from '../redux/makesSlice';
 import { fetchManufacturers } from '../redux/manufacturersSlice'
+import { fetchMotos } from '../redux/motosSlice';
 import { fetchParts } from '../redux/partsSlice';
+import { fetchTrucks } from '../redux/trucksSlice';
 
 const Grid = () => {
   //Importing methods from libraries
@@ -14,10 +17,16 @@ const Grid = () => {
   const makes = useSelector((state) => state.makes.makes);
   const manufacturers = useSelector((state) => state.manufacturers.manufacturers);
   const parts = useSelector((state) => state.parts.parts);
+  const cars = useSelector((state) => state.cars.cars);
+  const motos = useSelector((state) => state.motos.motos);
+  const trucks = useSelector((state) => state.trucks.trucks);
 
   const makesCount = useSelector((state) => state.makes.count);
   const manufacturersCount = useSelector((state) => state.manufacturers.count);
   const partsCount = useSelector((state) => state.parts.count);
+  const carsCount = useSelector((state) => state.cars.count);
+  const motosCount = useSelector((state) => state.motos.count);
+  const trucksCount = useSelector((state) => state.trucks.count);
 
   //Fetching data when mounting the components
   useEffect(() => {
@@ -35,6 +44,24 @@ const Grid = () => {
   useEffect(() => {
     if (parts.length === 0) {
       dispatch(fetchParts());
+    }
+  });
+
+  useEffect(() => {
+    if (cars.length === 0) {
+      dispatch(fetchCars());
+    }
+  });
+
+  useEffect(() => {
+    if (motos.length === 0) {
+      dispatch(fetchMotos());
+    }
+  });
+
+  useEffect(() => {
+    if (trucks.length === 0) {
+      dispatch(fetchTrucks());
     }
   });
 
@@ -57,6 +84,24 @@ const Grid = () => {
       path: '/parts',
       id: '3',
       count: partsCount,
+    },
+    {
+      category: 'Cars',
+      path: '/cars',
+      id: '4',
+      count: carsCount,
+    },
+    {
+      category: 'Motos',
+      path: '/motos',
+      id: '5',
+      count: motosCount,
+    },
+    {
+      category: 'Trucks',
+      path: '/trucks',
+      id: '6',
+      count: trucksCount,
     },
   ];
 
