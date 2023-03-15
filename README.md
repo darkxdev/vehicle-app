@@ -49,7 +49,7 @@ Check the app presentation [here](https://www.loom.com/share/1848d5111515461080d
 
 You can checkout the live running version of this app at the following link:
 
-(Under Development)
+[https://vehicle-app.onrender.com](https://vehicle-app.onrender.com)
 
 <!-- GETTING STARTED -->
 
