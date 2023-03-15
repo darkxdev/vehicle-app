@@ -6,12 +6,20 @@ const Motos = () => {
 
   return (
     <div className="motos-page details-page">
-      <h1>Motos</h1>
-      <p>{motosCount}</p>
+      <h3>CATEGORY BREAKDOWN</h3>
+      <div className="details-header">
+        <h2>MOTOS</h2>
+        <p>{motosCount}</p>
+      </div>
+      <h3>ITEMS</h3>
       <ul>
         {motos.map((moto) => (
           <li key={moto.MakeId}>
             {moto.MakeName}
+            <div className="more">
+              <p>{moto.MakeId}</p>
+              <i className="fa-regular fa-circle-right"></i>
+            </div>
           </li>
         ))}
       </ul>
