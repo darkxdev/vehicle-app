@@ -4,7 +4,7 @@ const Parts = () => {
   const parts = useSelector((state) => state.parts.parts);
 
   return (
-    <div className="parts-page page">
+    <div className="parts-page details-page">
       <h1>Parts</h1>
       <ul>
         {parts.map((part) => (

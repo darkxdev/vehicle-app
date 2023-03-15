@@ -4,7 +4,7 @@ const Cars = () => {
   const cars = useSelector((state) => state.cars.cars);
 
   return (
-    <div className="cars-page page">
+    <div className="cars-page details-page">
       <h1>Cars</h1>
       <ul>
         {cars.map((car) => (

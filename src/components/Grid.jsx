@@ -84,7 +84,7 @@ const Grid = () => {
     },
   ];
 
-  // Search bar filter methods
+  // Searchbar filter methods
   const filteredCategories = useMemo(() => {
     return categories.filter((category) =>
       category.category.toLowerCase().includes(query.toLowerCase())
@@ -97,16 +97,21 @@ const Grid = () => {
 
   // Rendering the component
   return (
-    <div>
+    <div className="grid">
       <h3>STATS BY CATEGORY</h3>
       <input type="text" placeholder="Search categories" value={query} onChange={handleQueryChange} />
       <ul>
         {filteredCategories.map((category) => (
           <li key={category.id}>
             <NavLink to={category.path}>
-              {category.category}
+              <div className="cards">
+                <i className="fa-regular fa-circle-right"></i>
+                <div className="card-info">
+                  {category.category}
+                  {category.count && <p>{category.count}</p>}
+                </div>
+              </div>
             </NavLink>
-            {category.count && <p>{category.count} items</p>}
           </li>
         ))}
       </ul>

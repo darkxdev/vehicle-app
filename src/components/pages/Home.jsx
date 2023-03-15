@@ -1,7 +1,7 @@
 import Grid from '../Grid';
 
 const Homepage = () => (
-  <div className="homepage page">
+  <div className="homepage">
     <Grid />
   </div>
 );

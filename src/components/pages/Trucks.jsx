@@ -4,7 +4,7 @@ const Trucks = () => {
   const trucks = useSelector((state) => state.trucks.trucks);
 
   return (
-    <div className="trucks-page page">
+    <div className="trucks-page details-page">
       <h1>Trucks</h1>
       <ul>
         {trucks.map((truck) => (

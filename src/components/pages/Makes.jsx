@@ -4,7 +4,7 @@ const Makes = () => {
   const makes = useSelector((state) => state.makes.makes);
 
   return (
-    <div className="makes-page page">
+    <div className="makes-page details-page">
       <h1>Makes</h1>
       <ul>
         {makes.map((maker) => (

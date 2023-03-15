@@ -5,7 +5,7 @@ const Motos = () => {
   const motosCount = useSelector((state) => state.motos.count);
 
   return (
-    <div className="motos-page page">
+    <div className="motos-page details-page">
       <h1>Motos</h1>
       <p>{motosCount}</p>
       <ul>
