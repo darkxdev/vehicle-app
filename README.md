@@ -45,6 +45,8 @@
 
 <!-- LIVE DEMO -->
 
+Check the app presentation [here](https://www.loom.com/share/1848d5111515461080db562c94ad55ab).
+
 You can checkout the live running version of this app at the following link:
 
 (Under Development)
