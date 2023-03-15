@@ -17,7 +17,7 @@ const Trucks = () => {
             {truck.MakeName}
             <div className="more">
               <p>{truck.MakeId}</p>
-              <i className="fa-regular fa-circle-right"></i>
+              <i className="fa-regular fa-circle-right" />
             </div>
           </li>
         ))}

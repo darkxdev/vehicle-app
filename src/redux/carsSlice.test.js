@@ -1,6 +1,6 @@
 import { fetchCars, carsSlice } from './carsSlice';
 
-//Unit testing
+// Unit testing
 describe('carsSlice', () => {
   const initialState = {
     cars: [],

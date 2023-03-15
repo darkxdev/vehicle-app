@@ -44,52 +44,52 @@ const Grid = () => {
   useFetchData(motos, fetchMotos);
   useFetchData(trucks, fetchTrucks);
 
-  // Object storing the categories and their properties
-  const categories = [
-    {
-      category: 'Makes',
-      path: '/makes',
-      id: '1',
-      count: makesCount,
-    },
-    {
-      category: 'Manufacturers',
-      path: '/manufacturers',
-      id: '2',
-      count: manufacturersCount,
-    },
-    {
-      category: 'Parts',
-      path: '/parts',
-      id: '3',
-      count: partsCount,
-    },
-    {
-      category: 'Cars',
-      path: '/cars',
-      id: '4',
-      count: carsCount,
-    },
-    {
-      category: 'Motos',
-      path: '/motos',
-      id: '5',
-      count: motosCount,
-    },
-    {
-      category: 'Trucks',
-      path: '/trucks',
-      id: '6',
-      count: trucksCount,
-    },
-  ];
-
   // Searchbar filter methods
   const filteredCategories = useMemo(() => {
-    return categories.filter((category) =>
-      category.category.toLowerCase().includes(query.toLowerCase())
+    // Object storing the categories and their properties
+    const categories = [
+      {
+        category: 'Makes',
+        path: '/makes',
+        id: '1',
+        count: makesCount,
+      },
+      {
+        category: 'Manufacturers',
+        path: '/manufacturers',
+        id: '2',
+        count: manufacturersCount,
+      },
+      {
+        category: 'Parts',
+        path: '/parts',
+        id: '3',
+        count: partsCount,
+      },
+      {
+        category: 'Cars',
+        path: '/cars',
+        id: '4',
+        count: carsCount,
+      },
+      {
+        category: 'Motos',
+        path: '/motos',
+        id: '5',
+        count: motosCount,
+      },
+      {
+        category: 'Trucks',
+        path: '/trucks',
+        id: '6',
+        count: trucksCount,
+      },
+    ];
+
+    return categories.filter(
+      (category) => category.category.toLowerCase().includes(query.toLowerCase()),
     );
-  }, [categories, query]);
+  }, [query, carsCount, makesCount, manufacturersCount, motosCount, partsCount, trucksCount]);
 
   const handleQueryChange = (event) => {
     setQuery(event.target.value);
@@ -105,7 +105,7 @@ const Grid = () => {
           <li key={category.id}>
             <NavLink to={category.path}>
               <div className="cards">
-                <i className="fa-regular fa-circle-right"></i>
+                <i className="fa-regular fa-circle-right" />
                 <div className="card-info">
                   {category.category}
                   {category.count && <p>{category.count}</p>}

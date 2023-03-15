@@ -18,7 +18,7 @@ const Parts = () => {
             {part.Name}
             <div className="more">
               <p>{part.ManufacturerId}</p>
-              <i className="fa-regular fa-circle-right"></i>
+              <i className="fa-regular fa-circle-right" />
             </div>
           </li>
         ))}

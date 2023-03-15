@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { fetchCars, carsSlice } from './carsSlice';
 import axios from 'axios';
+import { fetchCars, carsSlice } from './carsSlice';
 
 jest.mock('axios');
 

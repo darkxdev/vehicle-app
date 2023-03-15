@@ -18,7 +18,7 @@ const Manufacturers = () => {
             {manufacturer.Mfr_Name}
             <div className="more">
               <p>{manufacturer.Mfr_ID}</p>
-              <i className="fa-regular fa-circle-right"></i>
+              <i className="fa-regular fa-circle-right" />
             </div>
           </li>
         ))}

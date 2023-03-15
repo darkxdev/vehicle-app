@@ -28,14 +28,14 @@
 
 h3 {
   color: #fff;
-  font-size: .85rem;
+  font-size: 0.85rem;
   background-color: var(--title-pink);
-  padding: .3rem .6rem;
+  padding: 0.3rem 0.6rem;
 }
 
 .grid input {
   width: 100%;
-  padding: .35rem .6rem;
+  padding: 0.35rem 0.6rem;
   box-sizing: border-box;
   display: block;
   margin: 0 auto;
@@ -63,6 +63,13 @@ h3 {
   padding-top: 8rem;
 }
 
+.details-page ul li {
+  padding: 2rem 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .grid ul li:nth-child(odd) {
   background-color: var(--light-pink);
 }
@@ -85,6 +92,10 @@ h3 {
   text-decoration: none;
 }
 
+.more p {
+  padding-right: 1rem;
+}
+
 .grid ul li p {
   font-weight: 400;
   font-size: 1rem;
@@ -103,13 +114,6 @@ h3 {
   padding: 4rem 1rem 2rem;
 }
 
-.details-page ul li {
-  padding: 2rem .8rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .details-page ul li:nth-child(odd) {
   background-color: var(--light-pink);
 }
@@ -121,8 +125,4 @@ h3 {
 .more {
   display: flex;
   align-items: center;
-}
-
-.more p {
-  padding-right: 1rem;
 }
