@@ -93,7 +93,6 @@ Bryan Hurtado
 ## 🔭 Future Features <a name="future-features"></a>
 
 - **Additional functional pages**
-- **User info collection through forms**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
