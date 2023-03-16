@@ -145,7 +145,7 @@ If you like this project, please make sure to visit my page and checkout my othe
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Original design idea by Nelson Sakwa on Behance.
+Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/gallery/31579789/Ballhead-App-%28Free-PSDs%29).
 
 <p align="right">(<a href="#readme-top">back to top</a>)<tra/p>
 
