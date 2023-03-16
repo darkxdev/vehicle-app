@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --default-pink: #fd5294;
+  --light-pink: #eb4b8a;
+  --darker-pink: #cf4278;
+  --title-pink: #df4783;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+}
+
+.App {
+  max-width: 475px;
+  margin: auto;
+  background-color: var(--default-pink);
+}
+
+/* Homepage */
+
+.header-bar,
+.header-year {
+  display: flex;
+  align-items: center;
+}
+
+.header-bar {
+  justify-content: space-between;
+  padding: 0.5rem 0.8rem;
+  background-color: var(--title-pink);
+}
+
+.header-year i {
+  margin-right: 0.5rem;
+}
+
+.fa-gear {
+  margin-left: 1.5rem;
+}
+
+.grid {
+  background-color: var(--default-pink);
+}
+
+h3 {
+  color: #fff;
+  font-size: 0.85rem;
+  background-color: var(--title-pink);
+  padding: 0.3rem 0.6rem;
+}
+
+.grid input {
+  width: 100%;
+  padding: 0.35rem 0.6rem;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  color: #000;
+}
+
+.grid ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+}
+
+.cards {
+  padding: 1.5rem 1rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.card-info {
+  text-align: right;
+  padding-top: 8rem;
+}
+
+.details-page ul li {
+  padding: 2rem 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid ul li:nth-child(odd) {
+  background-color: var(--light-pink);
+}
+
+.grid ul li:nth-child(even) {
+  background-color: var(--darker-pink);
+}
+
+.grid ul li:nth-child(4n+2),
+.grid ul li:nth-child(4n+3) {
+  background-color: var(--darker-pink);
+}
+
+.grid ul li:nth-child(4n+4),
+.grid ul li:nth-child(4n+5) {
+  background-color: var(--light-pink);
+}
+
+.grid ul li a {
+  text-decoration: none;
+}
+
+.more p {
+  padding-right: 1rem;
+}
+
+.grid ul li p {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+/* Details page */
+
+.details-page ul {
+  list-style: none;
+}
+
+.details-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 4rem 1rem 2rem;
+}
+
+.details-page ul li:nth-child(odd) {
+  background-color: var(--light-pink);
+}
+
+.details-page ul li:nth-child(even) {
+  background-color: var(--darker-pink);
+}
+
+.more {
+  display: flex;
+  align-items: center;
+}
