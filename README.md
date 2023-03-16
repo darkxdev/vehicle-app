@@ -6,6 +6,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -45,6 +46,8 @@
 
 <!-- LIVE DEMO -->
 
+## 🚀 Live Demo <a name="live-demo"></a>
+
 Check the app presentation [here](https://www.loom.com/share/1848d5111515461080db562c94ad55ab).
 
 You can checkout the live running version of this app at the following link:
@@ -59,22 +62,45 @@ To get a local copy up and running, follow these steps:
 
 ### Prerequisites
 
-In order to run this project you need:
-
-- VS Code installed.
-- A GitHub account.
-- Git Bash.
+In order to run this project you need to have Node.js installed in your environment.
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-- On VS Code, you can click on the "Source Control" icon on the left side bar.
-- From there click on the "Clone Repository" button.
-- Paste the URL from this project and choose a folder to store it.
-- Open the project.
+```sh
+  cd my-folder
+  git clone https://github.com/DarkxDev/vehicle-app
+```
 
-I do recommend this method given it is easier, but if you want you can make this process by running commands on the Git Bash terminal.
+### Install
+
+Install this project with:
+
+```sh
+  cd my-project
+  npm install
+```
+
+### Usage
+
+To run the project, execute the following command:
+
+```sh
+  npm run start
+```
+
+### Run tests
+
+To run tests, run the following command:
+
+```sh
+  npm run test
+```
+
+### Deployment
+
+This project was deploy using Render.com, there is no cl.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
