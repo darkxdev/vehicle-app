@@ -10,6 +10,10 @@
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#deployment)
 - [👤 Authors](#author)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
@@ -26,13 +30,10 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
-<details>
-  <summary>Languages</summary>
-  <ul>
-    <li>React</li>
-    <li>Redux</li>
-  </ul>
-</details>
+<ul>
+  <li>React</li>
+  <li>Redux</li>
+</ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -128,7 +129,7 @@ Bryan Hurtado
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/DarkxDev/bookstore/issues).
+Feel free to check the [issues page](https://github.com/DarkxDev/vehicle-app/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
