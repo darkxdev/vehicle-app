@@ -22,6 +22,26 @@
 
 /* Homepage */
 
+.header-bar,
+.header-year {
+  display: flex;
+  align-items: center;
+}
+
+.header-bar {
+  justify-content: space-between;
+  padding: .5rem .8rem;
+  background-color: var(--title-pink);
+}
+
+.header-year i {
+  margin-right: .5rem;
+}
+
+.fa-gear {
+  margin-left: 1.5rem;
+}
+
 .grid {
   background-color: var(--default-pink);
 }

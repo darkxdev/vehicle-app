@@ -7,6 +7,7 @@ import { fetchManufacturers } from '../redux/manufacturersSlice';
 import { fetchMotos } from '../redux/motosSlice';
 import { fetchParts } from '../redux/partsSlice';
 import { fetchTrucks } from '../redux/trucksSlice';
+import Header from './Header';
 
 const Grid = () => {
   // Importing methods from libraries
@@ -98,8 +99,11 @@ const Grid = () => {
   // Rendering the component
   return (
     <div className="grid">
+      <div>
+        <Header title="App" />
+        <input type="text" placeholder="Search categories" value={query} onChange={handleQueryChange} />
+      </div>
       <h3>STATS BY CATEGORY</h3>
-      <input type="text" placeholder="Search categories" value={query} onChange={handleQueryChange} />
       <ul>
         {filteredCategories.map((category) => (
           <li key={category.id}>

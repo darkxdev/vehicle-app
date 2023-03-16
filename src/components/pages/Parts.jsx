@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import Header from '../Header';
 
 const Parts = () => {
   const parts = useSelector((state) => state.parts.parts);
@@ -6,6 +7,7 @@ const Parts = () => {
 
   return (
     <div className="parts-page details-page">
+      <Header title="Parts/Items" />
       <h3>CATEGORY BREAKDOWN</h3>
       <div className="details-header">
         <h2>PARTS</h2>

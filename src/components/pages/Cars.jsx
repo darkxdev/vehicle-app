@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import Header from '../Header';
 
 const Cars = () => {
   const cars = useSelector((state) => state.cars.cars);
@@ -6,6 +7,7 @@ const Cars = () => {
 
   return (
     <div className="cars-page details-page">
+      <Header title="Cars/Items" />
       <h3>CATEGORY BREAKDOWN</h3>
       <div className="details-header">
         <h2>CARS</h2>
